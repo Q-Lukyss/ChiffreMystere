@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Chiffre Mystère"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="GameStateLabel"
+                Text="Je vais penser à un chiffre et vous allez essayer de le deviner !!!"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="CountLabel"
+                Text=""
+                FontSize="18"
+                HorizontalOptions="Center" />   
+
+            <Entry
+                x:Name="GuessInput"
+                Placeholder="Entrez un chiffre ici"
+                Keyboard="Numeric"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Deviner"
+                Clicked="OnGuessClicked"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="ResultLabel"
+                Text=""
+                FontSize="16"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="ReplayButton"
+                Text="Rejouer"
+                Clicked="OnReplayClicked"
+                IsVisible="False"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
